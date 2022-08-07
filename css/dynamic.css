@@ -1,0 +1,180 @@
+section img{
+  width: 243px;
+  margin-left: 34rem;
+  margin-top: -14rem;
+}
+section img:hover{
+  filter:blur(0.7px);
+}
+
+section{
+  width: 40%;
+  margin-top: 35%;
+}
+label span{
+  font-size: 0.8rem;
+}
+#register{
+  scroll-behavior: smooth;
+}
+main{
+  width: 50rem;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  height: 393px;
+}
+
+form{
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: flex-end;
+  position: absolute;
+  /*! text-align: center; */
+  left: 2rem;
+  top: 1rem;
+  /*scroll-behavior: smooth;*/
+}
+
+input{
+  font-size: 1em;
+  width: 439px;
+  background: rgba(238, 232, 232, 0.43);
+  box-sizing: border-box;
+  height: 25px;
+  color: black;
+  height: 41px;
+
+  margin-bottom: 0.9rem;
+}
+
+
+form h1 {
+  font-size: 0.8rem;
+  text-align: start;
+  margin-left: 2rem;
+}
+label img{
+  width: 1.2rem;
+  margin: 0 0.3rem -0.3rem 0;
+}
+label span{
+  position: relative;
+  top: -1.2rem;
+  left: 22%;
+}
+
+
+
+#login{
+  visibility: hidden;
+  gap:1rem;
+  margin-top: 5rem;
+  scroll-behavior: smooth;
+}
+
+#login span{
+  position: relative;
+  top: -2rem;
+}
+
+
+button{
+  color: hsl(0, 70%, 10%);
+  background: hsla(0, 5%, 92.2%, 0.8);
+  height: 30px;
+  margin-left: 13%;
+  cursor: pointer;
+}
+:is(button ,button + p){
+  margin-top: 3%;
+  text-align: center;
+  width: 439px;
+}
+
+
+:is(#telkey,#email_key,#user_inp,#psw):valid{
+  border: solid 5px blue;
+  background-color: #E7F6F56B;
+  /*! opacity: 1.6; */
+}
+
+:is(#telkey,#email_key,#user_inp,#psw):invalid{
+  border: solid 3px #db9c14e3;
+  background: hsl(0, 100%, 50%);
+}
+
+/*
+validity input tag 
+*/
+
+#user_inp:invalid + .validity_usr::before{
+  position: absolute;
+  content: '✖';
+  padding-left: 7px;
+  top: 0.5rem;
+  left: -6.3rem;
+  font-size: 2em;
+}
+#user_inp:valid + .validity_usr::after{
+  position: absolute;
+  content: '✓';
+  padding: 0px;
+  top: 0.5rem;
+  left: -6rem;
+  font-size: 2em;
+}
+
+#email_key:invalid + .validity_eml::before{
+  position: absolute;
+  content: '✖';
+  padding-left: 7px;
+  top: 0.5rem;
+  left: -6rem;
+  font-size: 2em;
+}
+#email_key:valid + .validity_eml::after{
+  position: absolute;
+  content: '✓';
+  padding-left: 7px;
+  top: 0.5rem;
+  left: -6rem;
+  font-size: 2em;
+}
+
+#telkey:invalid + .validity-tel::before{
+  position: absolute;
+  content: '✖';
+  padding-left: 7px;
+  top: 0.5rem;
+  left: -6rem;
+  font-size: 2em;
+}
+#telkey:valid + .validity-tel::after{
+  position: absolute;
+  content: '✓';
+  padding-left: 7px;
+  top: 0.5rem;
+  left: -6rem;
+  font-size: 2em;
+}
+
+#psw:invalid + .validity-pass::before{
+  position: absolute;
+  content: '✖';
+  padding-left: 7px;
+  top: 0.5rem;
+  left: -6.2rem;
+  font-size: 2em;
+}
+#psw:valid + .validity-pass::after{
+  position: absolute;
+  content: '✓';
+  padding-left: 7px;
+  top: 0.5rem;
+  left: -6rem;
+  font-size: 2em;
+}
+
+

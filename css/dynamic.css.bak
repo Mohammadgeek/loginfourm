@@ -1,0 +1,68 @@
+section img{
+  width: 243px;
+  margin-left: 31rem;
+  margin-top: -15rem;
+}
+section{
+  width: 40%;
+}
+label span{
+  font-size: 0.8rem;
+}
+label{
+  /*! margin: 0; */
+}
+main{
+  width: 50rem;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  height: 393px;
+}
+/*input {
+   position: relative;
+   top: 2rem;
+   right: 2rem;
+  
+}*/
+form{
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: flex-start;
+}
+input{
+  font-size: 0.8rem;
+  width: 404px;
+  margin-top: 1.5rem;
+  background: hsl(0, 0%, 90%, 0.2);
+}
+input:invalid {
+	background-color: hsl(0, 100%, 50%);
+}
+form span {
+  font-size: 0.8rem;
+  /*! text-align: right; */
+}
+label img{
+  width: 1.2rem;
+}
+:is(label span ,label img){
+  /*! margin-left: -0.2rem; */
+}
+#login{
+  visibility: hidden;
+}
+button{
+  color: hsl(0, 70%, 10%);
+  background: hsl(0, 0%, 90%, 0.8);
+  width: 305px;
+  height: 30px;
+  margin-left: 13%;
+}
+:is(button ,button + p){
+  margin-top: 3%;
+  text-align: center;
+  width: 416px;
+}
+
