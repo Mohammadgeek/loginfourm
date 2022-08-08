@@ -7,5 +7,4 @@
 
 عکس منوی ثبت نام
 
-![register menu](images\register.png "Logo Title Text 1")
-
+![register fourm ](images\register.png)
