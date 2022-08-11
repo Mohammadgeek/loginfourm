@@ -1,8 +1,10 @@
 section img{
   width: 243px;
-  margin-left: 34rem;
   margin-top: -14rem;
+  position: absolute;
+  right: 2rem;
 }
+
 section img:hover{
   filter:blur(0.7px);
 }
@@ -14,8 +16,12 @@ section{
 label span{
   font-size: 0.8rem;
 }
+#login #signup { /* style button register */
+  color: white;
+  padding: 2px;
+}
 #register{
-  scroll-behavior: smooth;
+  visibility: visible;
 }
 main{
   width: 50rem;
@@ -70,8 +76,10 @@ label span{
 #login{
   visibility: hidden;
   gap:1rem;
-  margin-top: 5rem;
-  scroll-behavior: smooth;
+  margin-top: 6rem;
+  /*! scroll-behavior: smooth; */
+  margin-left: 13rem;
+  align-items: flex-end;
 }
 
 #login span{
@@ -94,13 +102,13 @@ button{
 }
 
 
-:is(#telkey,#email_key,#user_inp,#psw):valid{
+:is(#telkey,#email_key,#user_inp,#psw,#log_user,#psw-log):valid{
   border: solid 5px blue;
   background-color: #E7F6F56B;
   /*! opacity: 1.6; */
 }
 
-:is(#telkey,#email_key,#user_inp,#psw):invalid{
+:is(#telkey,#email_key,#user_inp,#psw,#log_user,#psw-log):invalid{
   border: solid 3px #db9c14e3;
   background: hsl(0, 100%, 50%);
 }

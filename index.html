@@ -19,17 +19,17 @@
                 <label>
                     <span>Username </span>
                     <img src="./icons/user.svg" alt="" />
-                    <input />
+                    <input id = "log_user" type="text" value="mohammadgeek" pattern="[a-z]{3,32}" title="this username is not found!"/>
                 </label>
                 <label>
                     <span>Password</span>
                     <img src="./icons/password.svg" alt="" />
-                    <input />
+                    <input id = "psw-log" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" value="m79g23Q20"/>
                 </label>
                 <button>Login</button>
                 <p>
                     Don't have an account?
-                    <a href = "#" id = "register" style="color: white;">Register</a> <!-- if user click this link jump page load login menu -->
+                    <a href="#" id = "signup" onclick="backpage()">signup</a>
                 </p>
             </form>
             
@@ -69,14 +69,15 @@
 
                     <span class="validity-pass"></span>
                 </label>
-                <button onclick="register()" type = "submit">Register</button>
-                <p>
+                <button  type = "submit">Register</button>
+                 <p>
                     Already have an account?
-                    <a href = "#" id = "log"  onclick="myFunction()" style="color: white;">Log in</a><!-- if user click this link jump page load register menu -->
-                </p>
+                    <a href = "#" id = "log" onclick="myclick(this)" style="color: white;">Log in</a><!-- if user click this link jump page load register menu -->
+                </p>            
             </form>
+            
             <section>
-                <img src="illustrations/gangster.svg" alt="" />
+                <img id = "logo_img" src="illustrations/gangster.svg" alt="" />
             </section>
             
         </main>
