@@ -8,63 +8,78 @@
         />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Authentication</title>
-
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="./static.css" />
-        <link rel="stylesheet" href="./dynamic.css" />
+        <script src = "js/main.js"></script>
+        <link rel="stylesheet" href="css\static.css" />
+        <link rel="stylesheet" href="css\dynamic.css" />
     </head>
     <body>
         <main>
-            <form id="register">
-                <label>
-                    <span>Username</span>
-                    <img src="./icons/user.svg" alt="" />
-                    <input type= "text" minlength = "3" maxlength = "32"  required/>
-                </label>
-                <label>
-                    <span>Email</span>
-                    <img src="./icons/email.svg" alt="" />
-                    <input type= "email"  value = "default@simple.org" required/><!--pattern="[a-z]{4,8}" size="45"-->
-                    <span class="validity"></span>
-                </label>
-                <label>
-                    <span>Phone</span>
-                    <img src="./icons/phone.svg" alt="" />
-                    <input type = "tel"  maxlength="13" value = "+989364852026" pattern="[7-9]{1}[0-9]{9}" title="Please enter valid phone number" />
-                    <span class="validity-tel"></span>
-                </label>
-                <label>
-                    <span>Password</span>
-                    <img src="./icons/password.svg" alt="" />
-                    <input type = "password" minlength = "8" maxlength = "32" required />
-                    <span class="validity-pass"></span>
-                </label>
-                <button type = "submit">Register</button>
-                <p>
-                    Already have an account?
-                    <a href = "#" id = "register" style="color: white;">Log in</a><!-- if user click this link jump page load register menu -->
-                </p>
-            </form>
-            <section>
-                <img src="./illustrations/gangster.svg" alt="" />
-            </section>
             <form id="login"> <!-- hidden default and show login when user enter Register button <!-->
                 <label>
-                    <span>Username</span>
+                    <span>Username </span>
                     <img src="./icons/user.svg" alt="" />
-                    <input />
+                    <input id = "log_user" type="text"  pattern="[a-z]{3,32}" title="this username is not found!"/>
                 </label>
                 <label>
                     <span>Password</span>
                     <img src="./icons/password.svg" alt="" />
-                    <input />
+                    <input id = "psw-log" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
                 </label>
                 <button>Login</button>
                 <p>
                     Don't have an account?
-                    <a href = "#" id = "register" style="color: white;">Register</a> <!-- if user click this link jump page load login menu -->
+                    <a href="#" id = "signup" onclick="backpage()">signup</a>
                 </p>
             </form>
+            
+            <form id="register">
+                <label>
+                    <h1>Username</h1>
+                    <img src="icons/user.svg" alt="" />
+                    <input id = "user_inp" type= "text"  placeholder = "please enter your username" pattern="[a-z]{3,32}" title="3 to 32 lowercase letters" required/>
+                    <span class="validity_usr"></span>
+                </label>
+                <label>
+                    <h1>Email</h1>
+                    <img src="icons/email.svg" alt="" />
+                    <input id = "email_key" type= "email"  size = "35" maxlength="35"  placeholder="please enter your email" required/><!--pattern="[a-z]{4,8}" size="45"-->
+                    <span class="validity_eml"></span>
+                </label>
+                <label>
+                    <h1>Phone</h1>
+                    <img src="icons/phone.svg" alt="" />
+                    <!--
+                        min number equall 9
+                        use regex for filter iran prephone number 
+                    -->
+                    <input id = "telkey1" type = "tel"  maxlength = "13"  pattern="[0-9]{4,13}" title="you must phone auth number "/>
+                    <span class="validity-tel"></span>
+                </label>
+                <label>
+                    <h1>Password</h1>
+                    <img src="icons/password.svg" alt="" />
+                    <!--
+                        pattren auth with html5 
+                        !@#$%^&*
+                        must enter 8 charchter password
+                        one lowercase & one uppercase
+                    -->
+                    <input id = "psw" type = "password"  placeholder= "please enter your password" minlength = "8" maxlength = "32" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="you are select stornge password this here!" required />
+
+                    <span class="validity-pass"></span>
+                </label>
+                <button  type = "submit">Register</button>
+                 <p>
+                    Already have an account?
+                    <a href = "#" id = "log" onclick="myclick(this)" style="color: white;">Log in</a><!-- if user click this link jump page load register menu -->
+                </p>            
+            </form>
+            
+            <section>
+                <img id = "logo_img" src="illustrations/gangster.svg" alt="" />
+            </section>
+            
         </main>
     </body>
 </html>
