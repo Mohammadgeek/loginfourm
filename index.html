@@ -19,12 +19,12 @@
                 <label>
                     <span>Username </span>
                     <img src="./icons/user.svg" alt="" />
-                    <input id = "log_user" type="text"  pattern="[a-z]{3,32}" title="this username is not found!"/>
+                    <input id = "log_user" type="text"  pattern="[a-z]{3,32}" title="this username is not found!" placeholder = "please enter your username"/>
                 </label>
                 <label>
                     <span>Password</span>
                     <img src="./icons/password.svg" alt="" />
-                    <input id = "psw-log" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+                    <input id = "psw-log" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder = "please enter your password"/>
                 </label>
                 <button>Login</button>
                 <p>
@@ -49,22 +49,12 @@
                 <label>
                     <h1>Phone</h1>
                     <img src="icons/phone.svg" alt="" />
-                    <!--
-                        min number equall 9
-                        use regex for filter iran prephone number 
-                    -->
-                    <input id = "telkey" type = "tel"  maxlength = "13"  pattern="[0-9]{4,13}" title="you must phone auth number "/>
+                    <input id = "telkey" type = "tel"  maxlength = "13" placeholder = "please enter your phone" pattern="[0-9]{4,13}" title="you must phone auth number "/>
                     <span class="validity-tel"></span>
                 </label>
                 <label>
                     <h1>Password</h1>
                     <img src="icons/password.svg" alt="" />
-                    <!--
-                        pattren auth with html5 
-                        !@#$%^&*
-                        must enter 8 charchter password
-                        one lowercase & one uppercase
-                    -->
                     <input id = "psw" type = "password"  placeholder= "please enter your password" minlength = "8" maxlength = "32" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="you are select stornge password this here!" required />
 
                     <span class="validity-pass"></span>
