@@ -41,10 +41,10 @@ $btn_size: 313px;
             left: 18%;
         }
         #register label{
-            left: -6rem;
+            left: 4rem;
         }
         label span{
-            left: 33%;
+            left: 6rem;
         }
          #btn {
             width: $btn_size;
@@ -70,13 +70,15 @@ $btn_size: 313px;
             width: 182px;
         }
         #btn {
-            width: 182px;
+            width: 177px;
             position: relative;
-             left: -14rem;
+            left: -11rem;
+            top: 3rem;
          }
          #btn + p{
             left: -5rem;
             position: relative;
+            top: 2rem;
          }
         
     }
