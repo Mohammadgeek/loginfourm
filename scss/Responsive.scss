@@ -1,0 +1,93 @@
+/*
+Responsive unit for calculate media query
+*/
+$lg : 780px;
+$m: 650px;
+$sm: 450px;
+$xs: 320px;
+
+//variable sass 
+$input_size : 313px;
+$img_size : 205px;
+$img_mobile_size: 164px;
+$btn_size: 313px;
+
+
+@mixin largescreen($lg){
+    @media screen and(max-width: $lg) {
+        #register input{
+            width: $input_size;
+    }
+    #register label{
+        left: -2rem;
+        position: relative;
+    }
+    section img{
+        width: $img_size;
+        left: 57%;
+    }
+    #btn {
+        width: $btn_size;
+        position: relative;
+         left: -2rem;
+     }
+    }
+}
+
+@mixin mediumscreen($sm,$m) {
+    @media screen and(min-width: $sm) and (max-width: $m) {
+        section img{
+            width: $img_size;
+            left: 18%;
+        }
+        #register label{
+            left: -6rem;
+        }
+        label span{
+            left: 33%;
+        }
+         #btn {
+            width: $btn_size;
+            position: relative;
+             left: -6rem;
+         }
+}
+}
+
+@mixin mobilescreen($xs,$sm) {
+    @media screen and (min-width: $xs) and (max-width: $sm){
+        section img{
+            width: $img_mobile_size;
+            left: 30%;
+        }
+        #register label{
+            left: -14rem;
+        }
+        #register span{
+            visibility: hidden;
+        }
+        #register input{
+            width: 182px;
+        }
+        #btn {
+            width: 182px;
+            position: relative;
+             left: -14rem;
+         }
+         #btn + p{
+            left: -5rem;
+            position: relative;
+         }
+        
+    }
+}
+
+
+@include largescreen($lg);
+@include mediumscreen($sm,$m);
+@include mobilescreen($xs,$sm);
+
+
+
+
+

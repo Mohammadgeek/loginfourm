@@ -92,11 +92,11 @@ button{
   color: hsl(0, 70%, 10%);
   background: hsla(0, 5%, 92.2%, 0.8);
   height: 30px;
-  margin-left: 13%;
+  margin-left: 3%;
   cursor: pointer;
 }
 :is(button ,button + p){
-  margin-top: 3%;
+  margin-top: 1%;
   text-align: center;
   width: 439px;
 }
@@ -123,12 +123,13 @@ button{
 validity input tag with before & after 
 */
 
+
 #user_inp:invalid + .validity_usr::before{
   position: absolute;
   content: '✖';
   padding-left: 7px;
   top: 0.5rem;
-  left: -6.3rem;
+  left: -6rem;
   font-size: 2em;
 }
 #user_inp:valid + .validity_usr::after{
@@ -139,6 +140,7 @@ validity input tag with before & after
   left: -6rem;
   font-size: 2em;
 }
+
 
 #email_key:invalid + .validity_eml::before{
   position: absolute;

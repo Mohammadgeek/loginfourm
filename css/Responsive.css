@@ -1,0 +1,64 @@
+/*
+Responsive unit for calculate media query
+*/
+@media screen and (max-width: 780px) {
+  #register input {
+    width: 313px;
+  }
+  #register label {
+    left: -2rem;
+    position: relative;
+  }
+  section img {
+    width: 205px;
+    left: 57%;
+  }
+  #btn {
+    width: 313px;
+    position: relative;
+    left: -2rem;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 650px) {
+  section img {
+    width: 205px;
+    left: 18%;
+  }
+  #register label {
+    left: -6rem;
+  }
+  label span {
+    left: 33%;
+  }
+  #btn {
+    width: 313px;
+    position: relative;
+    left: -6rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 450px) {
+  section img {
+    width: 164px;
+    left: 30%;
+  }
+  #register label {
+    left: -14rem;
+  }
+  #register span {
+    visibility: hidden;
+  }
+  #register input {
+    width: 182px;
+  }
+  #btn {
+    width: 182px;
+    position: relative;
+    left: -14rem;
+  }
+  #btn + p {
+    left: -5rem;
+    position: relative;
+  }
+}
+
+/*# sourceMappingURL=Responsive.css.map */
