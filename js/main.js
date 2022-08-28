@@ -7,7 +7,7 @@ function myclick(e){
     const logo = document.getElementById("logo_img");
     const login = document.getElementById("login");
     if (signin.style.display === "none") {
-        signin.style.display = "block";
+        signin.style.display = "flex";
         login.style.visibility = "hidden";
     }
        else {
@@ -25,7 +25,7 @@ function backpage(){
   login.style.visibility = "hidden";
   const signin = document.querySelector("#register");
   const logo = document.getElementById("logo_img");
-  signin.style.display = "block";
+  signin.style.display = "flex";
   logo.style.right = "1rem";
   signin.scrollIntoView({behavior:"smooth"})
 
