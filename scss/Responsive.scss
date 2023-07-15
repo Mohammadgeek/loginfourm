@@ -12,6 +12,13 @@ $img_size : 205px;
 $img_mobile_size: 164px;
 $btn_size: 313px;
 
+@mixin loginscreen($lg){
+    @media screen and(max-width: $lg){
+        #login {
+            margin-left: -6rem;
+        }
+    }
+}
 
 @mixin largescreen($lg){
     @media screen and(max-width: $lg) {
@@ -88,6 +95,7 @@ $btn_size: 313px;
 @include largescreen($lg);
 @include mediumscreen($sm,$m);
 @include mobilescreen($xs,$sm);
+@include loginscreen($lg);
 
 
 
